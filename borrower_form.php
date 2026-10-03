@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $title = $id ? 'Edit Borrower' : 'Add Borrower';
-require 'includes/header.php';
+require 'header.php';
 ?>
 <div class="row justify-content-center"><div class="col-md-6">
   <div class="card"><div class="card-body">

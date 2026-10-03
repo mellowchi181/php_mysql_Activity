@@ -1,7 +1,7 @@
 <?php
 $title = 'Home';
 $fullwidth = true;
-require 'includes/header.php';
+require 'header.php';
 
 $totalBooks = (int)$conn->query("SELECT COALESCE(SUM(copies),0) FROM books")->fetch_row()[0];
 $borrowed   = (int)$conn->query("SELECT COUNT(*) FROM borrowings WHERE returned_at IS NULL")->fetch_row()[0];
@@ -120,4 +120,4 @@ $stats = ['Total Books' => $totalBooks, 'Available' => $available, 'Borrowed' =>
   </div></div>
 </div>
 
-<?php require 'includes/footer.php'; ?>
+<?php require 'footer.php'; ?>

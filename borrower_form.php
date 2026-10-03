@@ -55,4 +55,4 @@ require 'includes/header.php';
     </form>
   </div></div>
 </div></div>
-<?php require 'includes/footer.php'; ?>
+<?php require 'footer.php'; ?>

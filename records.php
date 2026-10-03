@@ -1,6 +1,6 @@
 <?php
 $title = 'Records';
-require 'includes/header.php';
+require 'header.php';
 
 $rows = $conn->query(
   "SELECT br.id, b.title, u.name, br.borrowed_at, br.due_date, br.returned_at
@@ -34,4 +34,4 @@ $rows = $conn->query(
   <?php if (!$rows): ?><tr><td colspan="6" class="text-center text-muted">No records yet.</td></tr><?php endif; ?>
   </tbody>
 </table></div></div>
-<?php require 'includes/footer.php'; ?>
+<?php require 'footer.php'; ?>

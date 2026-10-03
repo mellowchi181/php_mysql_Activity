@@ -1,6 +1,6 @@
 <?php
 $title = 'Borrowers';
-require 'includes/header.php';
+require 'header.php';
 $users = $conn->query(
   "SELECT u.id, u.name, u.email, u.created_at,
           (SELECT COUNT(*) FROM borrowings br WHERE br.user_id = u.id AND br.returned_at IS NULL) AS active
@@ -33,4 +33,4 @@ $users = $conn->query(
   <?php if (!$users): ?><tr><td colspan="6" class="text-center text-muted">No borrowers found.</td></tr><?php endif; ?>
   </tbody>
 </table></div></div>
-<?php require 'includes/footer.php'; ?>
+<?php require 'footer.php'; ?>

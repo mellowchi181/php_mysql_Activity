@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/config.php';
 $title = $title ?? 'Libraray';
 $page  = basename($_SERVER['PHP_SELF']);
 $fullwidth = $fullwidth ?? false; // landing-style pages manage their own containers

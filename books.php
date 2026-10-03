@@ -1,6 +1,6 @@
 <?php
 $title = 'Books';
-require 'includes/header.php';
+require 'header.php';
 
 $q = '%' . trim($_GET['q'] ?? '') . '%';
 $stmt = $conn->prepare(
@@ -49,4 +49,4 @@ $stmt->close();
   <?php if (!$books): ?><tr><td colspan="5" class="text-center text-muted">No books found.</td></tr><?php endif; ?>
   </tbody>
 </table></div></div>
-<?php require 'includes/footer.php'; ?>
+<?php require 'footer.php'; ?>
